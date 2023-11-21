@@ -1,0 +1,11 @@
+= provide :title_page, 'Cập nhập Partner'
+= provide :widget_item_action do
+  div
+    = widget_btn_add('Tạo Partner', new_users_our_partner_path)
+    = widget_btn_list('Danh sách Partner', users_our_partner_index_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/our_partner/form', locals: { form: @form, url: users_our_partner_path(@our_partner.id), method: :put }

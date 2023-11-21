@@ -1,0 +1,100 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  fail:
+    created: Created Fail
+  success:
+    updated: Update Success
+  helpers:
+    select:
+      prompt: Vui lòng chọn
+      reject: Từ chối
+      approve: Chấp thuận
+    data-confirm:
+      approve: Bạn chắc chắn muốn chấp thuận?
+      reject: Bạn chắn chắn muốn từ chối?
+      update: "%{subject} phải được duyệt lại nếu bạn muốn thay đổi nội dung?"
+    submit:
+      create: Tạo mới
+      submit: Lưu dữ liệu
+      update: Cập nhật
+      cancel: Hủy bỏ
+
+  ckeditor:
+    page_title: "CKEditor Files Manager"
+    confirm_delete: "Delete file?"
+    buttons:
+      cancel: "Cancel"
+      upload: "Upload"
+      delete: "Delete"
+      next: "Next"
+  home:
+    index:
+      home: "Home"
+      about: "About"
+      news: "News"
+      our_guest: "Our Guest"
+      package_tour: "Package Tour"
+      highlight_tour: "Highlight Tour"
+      car_rental: "Car Rental"
+      car_rental_with_driver: "CAR RENTAL WITH DRIVER"
+      contact: "Contact"
+      contact_us: "Contact Us"
+      contact_us_textf: "If You Have Any Query, Please Contact Us"
+      contact_us_texts: "Need a functional contact form?"
+      contact_form_your_name: "Your Name"
+      contact_form_your_email: "Your Email"
+      contact_form_subject: "Subject"
+      contact_form_your_message_text: "Leave a message here"
+      contact_form_your_message: "Message"
+      contact_form_send_message: "Send Message"
+      contact_details: "Contact Details"
+      quote: "Get A Quote"
+      vietnam_north: "Vietnam North"
+      vietnam_central: "Vietnam Central"
+      vietnam_sorth: "Vietnam South"
+      grand_vietnam: "Grand Vietnam"
+      our_partners: "Our Partners"
+      our_team: "Our Team"
+      text_our_team: "Our Expert People Ready to Help You"
+      see_more_our_team: "See More Our Team!"
+      very_good: "Very Good"
+      good: "Good"
+      book_now: "Book Now!"
+      explore_more: "Explore More"
+      quick_links: "Quick Links"
+      our_office: "Our Office"
+      business_hours: "Business Hours"
+      we_accept: "We accept"
+      call_us: "Call Us"
+      mail_us: "Mail Us"

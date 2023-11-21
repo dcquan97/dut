@@ -1,0 +1,18 @@
+#toast-container {
+  .toast-success {
+    background-color: $success;
+  }
+  .toast-warning {
+    background-color: $warning;
+  }
+  .toast-info {
+    background-color: $info;
+  }
+  .toast-error {
+    background-color: $danger;
+  }
+  .toast-bottom-right {
+    bottom: 12px;
+    right: 12px;
+  }
+}

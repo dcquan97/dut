@@ -1,0 +1,26 @@
+= provide :title_page, 'Tài khoản'
+.row
+  .col-lg-4
+    .card.mb-4.shadow.border-bottom-primary
+      .card-header.py-3
+        h6.m-0.font-weight-bold.text-primary Thông tin cá nhân
+      .card-body
+        = simple_form_for @form_basic_info, url: users_profile_path, data: { turbo: false }, method: :put do |f|
+          = f.input  :email, input_html: { readonly: true, name: :email }
+          = f.input  :name, label: 'Tên người dùng', input_html: { name: :name }
+          = f.button :submit, 'Cập nhập thông tin', name: :update_basic_info, class: 'btn-primary mt-1'
+
+  .col-lg-4
+    .card.mb-4.shadow.border-bottom-info
+      .card-header.py-3
+        h6.m-0.font-weight-bold.text-info Ảnh đại diện
+      .card-body
+        = render partial: 'users/avatar/form_change_avatar', locals: { form_avatar: @form_avatar }
+
+
+  .col-lg-4
+    .card.mb-4.shadow.border-bottom-warning
+      .card-header.py-3rm
+        h6.m-0.font-weight-bold.text-warning Đổi mật khẩu
+      .card-body
+        = render partial: 'users/profile/form_password', locals: { form: @form_update_password }

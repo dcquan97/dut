@@ -1,0 +1,15 @@
+tr.align-middle
+  td
+    = image_tag our_team.team_image_url, width: 130, class: 'img-fluid rounded'
+  td
+    = our_team.name
+  td
+    = our_team.status == 1 ? 'Hiện' : 'Ẩn'
+  td
+    = our_team.title
+  td
+    =link_to users_our_team_path(our_team), class: 'btn btn-warning btn-sm mr-3' do
+      i.far.fa-edit
+
+    =link_to users_our_team_path(our_team), class: 'btn btn-danger btn-sm', data: { turbo_method: :delete, turbo_confirm: 'Bạn chắn muốn xoá' }  do
+      i.far.fa-trash-alt

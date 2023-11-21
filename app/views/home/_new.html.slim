@@ -1,0 +1,17 @@
+.project-item.mb-5
+  .position-relative
+    = link_to image_tag(new.thumbnail_url, class: "bg-image hover-zoom"), news_path(new)
+    / .project-overlay
+    /   a.btn.btn-lg-square.btn-light.rounded-circle.m-1[href="#"]
+    /     i.fa.fa-link
+  .p-4
+    = link_to new.title, news_path(new), class: 'd-block h5', style: 'color: #003C71; text-decoration: none;'
+    / span.text-secondary
+    /   i.fa.fa-calendar
+    /   = " Updated " + new.updated_at.strftime("%d/%m/%Y")
+    .row.mt-1
+      .col style='color: #00abc5;'
+        = new.category
+    .price-box.text-end.mt-1
+       = link_to t("home.index.explore_more"), news_path(new), class: 'btn btn-primary button'
+    

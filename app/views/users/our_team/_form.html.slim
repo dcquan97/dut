@@ -1,0 +1,11 @@
+= simple_form_for form, url: url, data: { turbo: false }, method: method do |f|
+  = f.input  :name, label: 'Tên', class: 'mt-1'
+  = f.input  :title, label: 'Chức vụ', class: 'mt-1'
+  = f.input  :status, label: 'Hiển thị', collection: banner_status, class: 'mt-1'
+  = f.hidden_field :team_image_cache
+  = f.label 'Ảnh đại diện: '
+  - unless @our_team.nil?
+    = image_tag @our_team&.team_image_url, width: 130, class: 'mb-5'
+  = f.file_field :team_image, class: 'form-control-file'
+
+  = f.button :submit_with_cancel, cancel: users_our_team_index_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Posts') }

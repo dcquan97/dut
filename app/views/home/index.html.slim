@@ -1,0 +1,85 @@
+.container-fluid.px-0.mb-5
+  #header-carousel.carousel.slide.carousel-fade[data-bs-ride="carousel"]
+    .carousel-inner
+      = render partial: 'banner' , collection: @banner
+    button.carousel-control-prev[type="button" data-bs-target="#header-carousel" data-bs-slide="prev"]
+      span.carousel-control-prev-icon[aria-hidden="true"]
+      span.visually-hidden
+        | Previous
+    button.carousel-control-next[type="button" data-bs-target="#header-carousel" data-bs-slide="next"]
+      span.carousel-control-next-icon[aria-hidden="true"]
+      span.visually-hidden
+        | Next
+/-highlight tour
+/ .container-xxl.pt-5
+/   .container
+/     .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+/       p.fs-5.fw-medium.text-primary.mb-5.text-uppercase
+/         | Tin mới nhất
+/     .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+/       = render partial: 'highlight_tour', collection: @highlight_tour
+/-abc
+/ .container-xxl.my-5
+/   .container
+/     .row.justify-content-center.align-items-center
+/       .col-12.col-lg-6.wow.fadeInUp[data-wow-delay="0.1s"]
+/         .text-wrapper
+/           p.mbr-section-subtitle.mbr-fonts-style.mbr-white.display-4.text-primary
+/             em
+/               | DUT
+/             hr
+/           p.mbr-section-text.mbr-fonts-style.mbr-white.display-7
+/           = @page_info&.about_home&.html_safe
+/           .mbr-section-bottom
+/       .col-12.col-lg-6.image-wrapper.wow.fadeInUp[data-wow-delay="0.1s"]
+/         .mbr-img-wrap
+/           = image_tag @page_info&.image_about_url, class:'w-100 rounded'
+/-package tour
+.container-xxl.pt-5
+  .container
+    .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+      p.fs-5.fw-medium.text-primary.mb-5.text-uppercase
+        | Tin mới nhất
+    .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+      = render partial: 'package_tour', collection: @package_tour
+/-car rental
+/ .container-xxl.pt-5
+/   .container
+/     .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+/       p.fs-5.fw-medium.text-primary.mb-5.text-uppercase
+/         = t("home.index.car_rental_with_driver")
+/     .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+/       = render partial: 'car_rental', collection: @car_rental
+/-our guest
+/ .container-xxl.pt-5
+/   .container
+/     .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+/       p.fs-5.fw-medium.text-primary.mb-5.text-uppercase
+/         = t("home.index.our_guest")
+/     .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+/       = render partial: 'our_guest', collection: @our_guest
+/-new
+.container-xxl.pt-5
+  .container
+    .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+      p.fs-5.fw-medium.text-primary.mb-5.text-uppercase
+        = t("home.index.news")
+    .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+      = render partial: 'new', collection: @new
+.container-xxl.py-5
+  .container
+    .text-center.mx-auto.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+      p.fs-5.fw-medium.text-primary.text-uppercase
+        / = t("home.index.our_team")
+      h1.display-5.mb-5
+        = t("home.index.text_our_team")
+    .row.g-4
+      = render partial: 'team', collection: @team
+    .text-center.mt-5
+      = link_to t("home.index.see_more_our_team"), about_us_path, class: 'btn btn-primary button'
+.container-xxl.pt-5
+  .container
+  h2.text-center.font-weight-bold.text-primary.text-uppercase
+    = t("home.index.our_partners")
+  section.customer-logos.slider
+    = render partial: 'partners', collection: @partner

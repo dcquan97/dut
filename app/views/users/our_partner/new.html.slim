@@ -1,0 +1,8 @@
+= provide :title_page, 'Thêm Partner'
+= provide :widget_item_action, widget_btn_list('Danh sách Partner', users_our_partner_index_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/our_partner/form', locals: { form: @form, url: users_our_partner_index_path, method: :post }

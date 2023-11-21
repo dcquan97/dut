@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title
+      | UNIVERSITY OF SCIENCE AND TECHNOLOGY
+    = favicon_link_tag 'logo-mini.jpeg'
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    meta[content="width=device-width, initial-scale=1.0" name="viewport"]
+    meta[content="" name="keywords"]
+    meta[content="" name="description"]
+    meta[name="turbo-visit-control" content="reload"]
+    link[rel="preconnect" href="https://fonts.googleapis.com"]
+    link[rel="preconnect" href="https://fonts.gstatic.com" crossorigin]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = javascript_include_tag Ckeditor.cdn_url
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    script[src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js", data-turbo-track="reload"]
+    script[src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js", data-turbo-track="reload"] 
+  
+  body 
+    / #fb-root
+    / #fb-customer-chat.fb-customerchat
+    / script
+    /   | var chatbox = document.getElementById('fb-customer-chat'); chatbox.setAttribute("page_id", "104246472646256"); chatbox.setAttribute("attribution", "biz_inbox");
+    / script
+    /   | window.fbAsyncInit = function() { FB.init({ xfbml : true, version : 'v17.0' }); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); 
+    = render partial: 'layouts/shared/toastr'
+    = render partial: 'layouts/shared/menu'
+    = yield
+    = render partial: 'layouts/shared/footer'

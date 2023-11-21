@@ -1,0 +1,68 @@
+.container-fluid.page-header.py-5.mb-5.wow.fadeIn[data-wow-delay="0.1s", style="background-image:url('#{@page_info&.image_contact_url}')"]
+  .container.text-center.py-5
+    h1.display-2.text-white.mb-4.animated.slideInDown[style='font-family: "UTMPenumbraBold","Roboto","sans-serif";']
+      = t("home.index.contact_us")
+.container-xxl.py-5
+  .container
+    .text-center.mx-auto.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+      h1.display-5.mb-5
+        = t("home.index.contact_us_textf")
+    .row.g-5
+      .col-lg-6.wow.fadeInUp[data-wow-delay="0.1s"]
+        h3.mb-4
+          = t("home.index.contact_us_texts")
+        p.mb-4
+          = @page_info&.contact_us&.html_safe
+        form
+          .row.g-3
+            .col-md-6
+              .form-floating
+                input#name.form-control[type="text" placeholder="#{t("home.index.contact_form_your_name")}"]
+                label[for="name"]
+                  = t("home.index.contact_form_your_name")
+            .col-md-6
+              .form-floating
+                input#email.form-control[type="email" placeholder="#{t("home.index.contact_form_your_email")}"]
+                label[for="email"]
+                  = t("home.index.contact_form_your_email")
+            .col-12
+              .form-floating
+                input#subject.form-control[type="text" placeholder="#{t("home.index.contact_form_subject")}"]
+                label[for="subject"]
+                  = t("home.index.contact_form_subject")
+            .col-12
+              .form-floating
+                textarea#message.form-control[placeholder="#{t("home.index.contact_form_your_message_text")}" style="height: 200px"]
+                label[for="message"]
+                  = t("home.index.contact_form_your_message")
+            .col-12
+              button.btn.btn-primary.rounded-pill.py-3.px-5[type="submit"]
+                = t("home.index.contact_form_send_message")
+      .col-lg-6.wow.fadeInUp[data-wow-delay="0.5s"]
+        h3.mb-4
+          = t("home.index.contact_details")
+        .d-flex.border-bottom.pb-3.mb-3
+          .flex-shrink-0.btn-square.bg-primary.rounded-circle
+            i.fa.fa-map-marker-alt.text-white
+          .ms-3
+            h6
+              = t("home.index.our_office")
+            span
+              = @page_info&.address
+        .d-flex.border-bottom.pb-3.mb-3
+          .flex-shrink-0.btn-square.bg-primary.rounded-circle
+            i.fa.fa-phone-alt.text-white
+          .ms-3
+            h6
+              = t("home.index.call_us")
+            span
+              = @page_info&.sdt
+        .d-flex.border-bottom-0.pb-3.mb-3
+          .flex-shrink-0.btn-square.bg-primary.rounded-circle
+            i.fa.fa-envelope.text-white
+          .ms-3
+            h6
+              = t("home.index.mail_us")
+            span
+              = @page_info&.email
+        iframe.w-100.rounded[src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8036941745863!2d108.15080221022349!3d16.075673439202095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218d68dff9545%3A0x714561e9f3a7292c!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6FjaCBLaG9hIC0gxJDhuqFpIGjhu41jIMSQw6AgTuG6tW5n!5e0!3m2!1svi!2s!4v1698290257659!5m2!1svi!2s" frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"]

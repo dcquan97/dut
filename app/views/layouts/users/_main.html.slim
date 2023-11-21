@@ -1,0 +1,15 @@
+#spinner.show.bg-white.position-fixed.translate-middle.w-100.vh-100.top-50.start-50.d-flex.align-items-center.justify-content-center
+  .spinner-border.text-primary[role="status" style="width: 3rem; height: 3rem;"]
+#wrapper
+  = render partial: 'layouts/users/shared/nav_admin'
+
+  #content-wrapper.d-flex.flex-column
+    #content
+      = render partial: 'layouts/users/shared/top_bar'
+      .container-fluid
+        = render partial: 'layouts/users/shared/page_heading'
+        = yield
+
+    / = render partial: 'layouts/users/shared/footer'
+
+= render partial: 'layouts/users/shared/modals/logout'

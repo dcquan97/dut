@@ -1,0 +1,12 @@
+/! Page Content
+.container
+  /! Title
+  h1.mt-4.text-dark = @car_rental.title
+  /! Author
+  p.small
+    = @car_rental.created_at.in_time_zone("Hanoi").strftime("%d %B, %Y at %H:%M")
+  /! Date/Time
+  hr
+  /! Post Content
+  = @car_rental.description.html_safe
+  hr/

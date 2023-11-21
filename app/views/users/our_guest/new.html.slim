@@ -1,0 +1,8 @@
+= provide :title_page, 'Tạo bài viết our guest'
+= provide :widget_item_action, widget_btn_list('Danh sách bài viết our guest', users_our_guest_index_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/our_guest/form', locals: { form: @form, url: users_our_guest_index_path, method: :post }

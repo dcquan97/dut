@@ -1,0 +1,13 @@
+@mixin buildCol($media, $qtyCol, $prefix) {
+  @for $i from 1 through $qtyCol {
+    @if $media == '' {
+      .#{$prefix}-#{$i} {
+        width: calc($i / $qtyCol);
+      }
+    } @else {
+      .#{$prefix}-#{$media}-#{$i} {
+        width: calc($i / $qtyCol);
+      }
+    }
+  }
+}

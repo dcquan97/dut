@@ -1,0 +1,21 @@
+vi:
+  success:
+    type: Thành công
+    updated: Cập nhập dữ liệu thành công
+    created: Thêm dữ liệu thành công
+    deleted: Xóa dữ liệu thành công
+    added: Thêm %{subject} thành công
+    reject_object: "%{subject} đã được từ chối thành công"
+    approve_object: "%{subject} đã được xét duyệt thành công"
+  fail:
+    type: Thất bại
+    updated: Cập nhập dữ liệu thất bại
+    created: Thêm dữ liệu thất bại
+    deleted: Xóa dữ liệu thất bại
+    added: Thêm %{subject} thất bại
+    approve_object: "%{subject} đã bị xét duyệt thất bại"
+    reject_object: "%{subject} đã bị từ chối thất bại"
+  delete:
+    confirm: Hãy chắc chắn rằng bạn muốn xóa dữ liệu này?
+  yet:
+    approve_object: "%{subject} chưa được xét duyệt"

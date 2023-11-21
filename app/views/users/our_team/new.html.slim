@@ -1,0 +1,8 @@
+= provide :title_page, 'Thêm thành viên'
+= provide :widget_item_action, widget_btn_list('Danh sách thành viên', users_our_team_index_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/our_team/form', locals: { form: @form, url: users_our_team_index_path, method: :post }

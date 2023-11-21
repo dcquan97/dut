@@ -1,0 +1,26 @@
+= simple_form_for form, url: url, data: { turbo: false }, method: method do |f|
+  = f.input  :status, label: 'Hiển thị thông tin ở', collection: status_page_info, class:'mb-5'
+  = f.label 'Nội dung ở Home Page:', class:'mt-2  mb-1'
+  = f.cktext_area  :about_home, label: 'Nội dung About ở Home Page', ckeditor: { toolbar: 'full'}
+  = f.label 'Nội dung ở About Us:', class:'mt-2  mb-1'
+  = f.cktext_area  :about_us, label: 'Nội dung About Us', ckeditor: { toolbar: 'full'}
+  = f.hidden_field :image_about_cache
+  = f.label 'Ảnh ở about us: '
+  = image_tag @page_info&.image_about_url, width: 130, class: 'mb-5'
+  = f.file_field :image_about, class: 'form-control-file'
+  br
+  = f.hidden_field :image_contact_cache
+  = f.label 'Ảnh ở contact us: '
+  = image_tag @page_info&.image_contact_url, width: 130, class: 'mb-5'
+  = f.file_field :image_contact, class: 'form-control-file'
+  br
+  = f.label 'Nội dung ở Contact Us:', class:'mt-2 mb-1'
+  = f.cktext_area  :contact_us, label: 'Nội dung Contact Us', ckeditor: { toolbar: 'full'}
+  = f.input  :sdt, label: 'Số điện thoại', class: 'mt-1'
+  = f.input  :email, label: 'Email', class: 'mt-1'
+  = f.input  :address, label: 'Địa chỉ', class: 'mt-1'
+  = f.input  :link_fb, label: 'Link FB', class: 'mt-1'
+  = f.input  :link_youtube, label: 'Link Youtube', class: 'mt-1'
+  = f.input  :link_twitter, label: 'Link Twitter', class: 'mt-1'
+
+  = f.button :submit_with_cancel, cancel: users_page_info_index_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Posts') }

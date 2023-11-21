@@ -1,0 +1,11 @@
+development:
+  cloud_name: "dcqbean"
+  api_key: "251127759461936"
+  api_secret: "CEHW5Ugu1dfevM7qxnToJV1Is-o"
+  secure: true
+
+production:
+  cloud_name: "dcqbean"
+  api_key: "251127759461936"
+  api_secret: "CEHW5Ugu1dfevM7qxnToJV1Is-o"
+  secure: true

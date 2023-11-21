@@ -1,0 +1,12 @@
+/! Page Content
+.container
+  /! Title
+  h1.mt-4.text-dark = @our_guest.title
+  /! Author
+  p.small
+    = @our_guest.created_at.in_time_zone("Hanoi").strftime("%d %B, %Y at %H:%M")
+  /! Date/Time
+  hr
+  /! Post Content
+  = @our_guest.description.html_safe
+  hr/

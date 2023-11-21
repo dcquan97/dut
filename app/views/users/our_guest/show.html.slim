@@ -1,0 +1,11 @@
+= provide :title_page, 'Cập nhập bài viết'
+= provide :widget_item_action do
+  div
+    = widget_btn_add('Tạo bài viết', new_users_our_guest_path)
+    = widget_btn_list('Danh sách bài viết', users_our_guest_index_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/our_guest/form', locals: { form: @form, url: users_our_guest_path(@our_guest.id), method: :put }

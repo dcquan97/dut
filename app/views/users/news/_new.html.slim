@@ -1,0 +1,24 @@
+tr.align-middle
+  td
+    = image_tag new.thumbnail_url, width: 130, class: 'img-fluid rounded'
+  td
+    = new.title
+  - if new.status == 0
+    td
+      | Ẩn
+  - else
+    td
+      | Hiện
+    td
+      - if new.status == 1 
+        | Tiếng anh
+      - else
+        | Tiếng việt
+  td
+    = new.created_at.in_time_zone("Hanoi").strftime("%H:%M %d-%m-%Y")
+  td
+    =link_to users_news_path(new), class: 'btn btn-warning btn-sm mr-3' do
+      i.far.fa-edit
+
+    =link_to users_news_path(new), class: 'btn btn-danger btn-sm', data: { turbo_method: :delete, turbo_confirm: 'Bạn chắn muốn xoá' }  do
+      i.far.fa-trash-alt

@@ -1,0 +1,21 @@
+/! Page Content
+.container
+  /! Title
+  h1.mt-4.text-dark = @tour.title
+  /! Author
+  p.small
+    = @tour.created_at.in_time_zone("Hanoi").strftime("%d %B, %Y at %H:%M")
+  /! Date/Time
+  hr
+  /! Post Content
+  / = image_tag @tour.thumbnail_url, class: 'img-fluid rounded'
+  = @tour.description.html_safe
+  hr/
+
+.container-xxl.pt-5
+  .container
+    .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+      p.fs-5.fw-medium.text-white.mb-5.button
+        | Tin tức nổi bật!
+    .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+      = render partial: 'highlight_tour', collection: @highlight_tour

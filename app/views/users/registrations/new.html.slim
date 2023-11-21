@@ -1,0 +1,48 @@
+- @bodyclass='bg-gradient-primary'
+.container
+  br
+  br
+  br
+  br
+
+  .row.justify-content-center
+    .col-xl-10.col-lg-12.col-md-9
+      .card.o-hidden.border-0.shadow-lg.my-5
+        .card-body.p-0
+          .row
+            .col-lg-6.d-none.d-lg-block.bg-login-image
+            .col-lg-6
+              .p-5
+                .text-center
+                  h1.h4.text-gray-900.mb-4
+                    | Tạo tài khoản mới
+                  p.text-error= notice || alert
+
+                = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'user' }) do |f|
+                  = devise_error_messages!
+                  / .form-group
+                  /   = f.text_field :name, autofocus: true, class: 'form-control form-control-user', placeholder: "Họ và tên"
+                  / .form-group
+                  /   = f.text_field :phone, autofocus: true, class: 'form-control form-control-user', placeholder: "Số điện thoại"
+                  .form-group
+                    = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control form-control-user', placeholder: "Email"
+                  .form-group
+                    = f.password_field :password, autocomplete: "current-password", class: 'form-control form-control-user', placeholder: "Mật khẩu"
+                  .form-group
+                    = f.password_field :password_confirmation, autofocus: true, autocomplete: "email", class: 'form-control form-control-user', placeholder: "Xác nhận mật khẩu"
+
+                  = f.submit "Đăng ký", class: 'btn btn-primary btn-user btn-block'
+
+                hr
+                .text-center
+                  | Bạn đã có tài khoản?
+                  = link_to ' Đăng nhập', new_user_session_path
+                  / = link_to 'Quên mật khẩu', new_user_password_path, class: 'small'
+br
+br
+br
+br
+br
+br
+br
+br

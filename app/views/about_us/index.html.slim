@@ -1,0 +1,29 @@
+/ .container-fluid.page-header.py-5.mb-5.wow.fadeIn[data-wow-delay="0.1s", style="background-image:url('#{@page_info&.image_contact_url}')"]
+/   .container.text-center.py-5
+    / h1.display-2.text-white.mb-4.animated.slideInDown[style='font-family: "UTMPenumbraBold","Roboto","sans-serif";']
+    /   = t("home.index.about")
+
+.container-xxl.my-5
+  .container
+    .row.justify-content-center.align-items-center
+      .col-12.col-lg-6.wow.fadeInUp[data-wow-delay="0.1s"]
+        .text-wrapper
+          p.mbr-section-subtitle.mbr-fonts-style.mbr-white.display-4.text-primary
+            em
+              | ĐẠI HỌC ĐÀ NẴNG - TRƯỜNG ĐẠI HỌC BÁCH KHOA
+            hr
+          p.mbr-section-text.mbr-fonts-style.mbr-white.display-7
+            = @page_info.about_us.html_safe
+          .mbr-section-bottom
+      .col-12.col-lg-6.image-wrapper.wow.fadeInUp[data-wow-delay="0.1s"]
+        .mbr-img-wrap
+          = image_tag @page_info.image_about_url, class:'w-100 rounded'
+.container-xxl.py-5
+  .container
+    .text-center.mx-auto.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+      p.fs-5.fw-medium.text-primary
+        = t("home.index.our_team")
+      h1.display-5.mb-5
+        = t("home.index.text_our_team")
+    .row.g-4
+      = render partial: 'team', collection: @team

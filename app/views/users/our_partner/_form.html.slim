@@ -1,0 +1,8 @@
+= simple_form_for form, url: url, data: { turbo: false }, method: method do |f|
+  = f.hidden_field :partner_image_cache
+  = f.label 'Ảnh partner: '
+  - unless @our_partner.nil?
+    = image_tag @our_partner&.partner_image_url, width: 130, class: 'mb-5'
+  = f.file_field :partner_image, class: 'form-control-file'
+
+  = f.button :submit_with_cancel, cancel: users_car_rental_index_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Posts') }

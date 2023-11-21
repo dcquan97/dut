@@ -1,0 +1,18 @@
+ruby:
+  toastr = ''
+  flash.each do |type, content|
+    body = content.gsub("'"){"\\'"}
+    toastr += "toastr.error('#{body}');"   if type.start_with? 'alert'
+    toastr += "toastr.success('#{body}');" if type.start_with? 'notice'
+    toastr += "toastr.warning('#{body}');" if type.start_with? 'warning'
+    toastr += "toastr.info('#{body}');"    if type.start_with? 'info'
+  end
+  flash.discard
+
+javascript:
+  toastr.options.positionClass = 'toast-bottom-right';
+  toastr.options.closeButton   = true;
+  toastr.options.progressBar   = true;
+  toastr.options.timeOut       = 5000;
+  toastr.options.extendedTimeOut = 5000;
+  #{toastr.html_safe}

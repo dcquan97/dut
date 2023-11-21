@@ -1,0 +1,7 @@
+ruby:
+  start_year = 2020
+  year = start_year == Date.today.year ? start_year : "#{start_year} - #{Date.today.year}"
+footer.sticky-footer#js-page-footer
+  .container.my-auto
+    .copyright.text-center.my-auto
+      span="Copyright © CTSV - DUT #{year}"

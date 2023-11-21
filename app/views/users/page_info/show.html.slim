@@ -1,0 +1,11 @@
+= provide :title_page, 'Cập nhập thông tin'
+= provide :widget_item_action do
+  div
+    = widget_btn_add('Tạo thông tin', new_users_page_info_path)
+    = widget_btn_list('Danh sách thông tin', users_page_info_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/page_info/form', locals: { form: @form, url: users_page_info_path(@page_info.id), method: :put }

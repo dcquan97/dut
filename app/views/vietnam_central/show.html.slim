@@ -1,0 +1,12 @@
+/! Page Content
+.container
+  /! Title
+  h1.mt-4.text-dark = @tour.title
+  /! Author
+  p.small
+    = @tour.created_at.in_time_zone("Hanoi").strftime("%d %B, %Y at %H:%M")
+  /! Date/Time
+  hr
+  /! Post Content
+  = @tour.description.html_safe
+  hr/

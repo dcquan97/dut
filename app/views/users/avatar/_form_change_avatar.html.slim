@@ -1,0 +1,9 @@
+= form_with model: form_avatar, url: users_avatar_path, data: { turbo: false }, scope: '', method: :put, local: true do |f|
+  .text-center
+    = image_tag current_user.avatar_url, width: 130, class: 'mb-5'
+  .form-group
+    label Chọn ảnh mới
+    = f.hidden_field :avatar_cache
+    = f.file_field :avatar, class: 'form-control-file'
+
+  = f.submit 'Đổi ảnh đại diện', class: 'btn btn-info mt-1'

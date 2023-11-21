@@ -1,0 +1,19 @@
+vi:
+  errors:
+    messages:
+      file_size_is_in: ! 'Kích thước tệp phải từ %{min} đến %{max}'
+      file_size_is_less_than: ! 'Kích thước tệp phải nhỏ hơn %{count}'
+      file_size_is_less_than_or_equal_to: ! 'Kích thước tệp phải nhỏ hơn hoặc bằng %{count}'
+      file_size_is_greater_than: ! 'Kích thước tệp phải lớn hơn %{count}'
+      file_size_is_greater_than_or_equal_to: ! 'Kích thước tệp phải lớn hơn hoặc bằng %{count}'
+
+      allowed_file_content_types: ! 'Tập tin phải là một trong những %{types}'
+      excluded_file_content_types: ! 'Tệp không thể được %{types}'
+      mini_magick_processing_error: ! 'Thao tác với MiniMagick không thành công, có thể không phải là hình ảnh? Lỗi ban đầu: %{e}'
+
+    models:
+      users/avatars/update_form:
+        attributes:
+          avatar:
+            blank: "Hãy chọn ảnh"
+            size: "Kích thước hình ảnh không được vượt quá 5 megabyte"

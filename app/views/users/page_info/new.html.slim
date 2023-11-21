@@ -1,0 +1,8 @@
+= provide :title_page, 'Tạo thông tin'
+= provide :widget_item_action, widget_btn_list('Danh sách', users_page_info_index_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/page_info/form', locals: { form: @form, url: users_page_info_index_path, method: :post }

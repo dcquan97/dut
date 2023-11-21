@@ -1,0 +1,10 @@
+.form-control-file {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.custom-control-input[disabled][checked] ~ .custom-control-label::before,
+.custom-control-input:disabled:checked ~ .custom-control-label::before {
+  background-color: $primary;
+}

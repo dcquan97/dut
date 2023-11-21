@@ -1,0 +1,7 @@
+nav.navbar.navbar-expand.navbar-light.bg-white.topbar.mb-4.static-top.shadow
+  button#sidebarToggleTop.js-sidebar-toggle.btn.btn-link.d-md-none.rounded-circle.mr-3
+    i.fa.fa-bars
+
+  = yield :search
+  = render partial: 'layouts/users/shared/user_dropdown'
+
