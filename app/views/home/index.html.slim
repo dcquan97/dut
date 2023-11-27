@@ -70,7 +70,7 @@
   .container
     .text-center.mx-auto.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
       p.fs-5.fw-medium.text-primary.text-uppercase
-        / = t("home.index.our_team")
+        | Đào tạo
       h1.display-5.mb-5
         = t("home.index.text_our_team")
     .row.g-4
@@ -80,6 +80,6 @@
 .container-xxl.pt-5
   .container
   h2.text-center.font-weight-bold.text-primary.text-uppercase
-    = t("home.index.our_partners")
+    | Hợp tác
   section.customer-logos.slider
     = render partial: 'partners', collection: @partner

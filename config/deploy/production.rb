@@ -63,4 +63,4 @@ set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/deploy/apps/dut"
 set :branch, :main
-server "103.171.90.219", user: "dut", roles: %w(web app db)
+server "194.163.128.238", user: "root", roles: %w(web app db)
