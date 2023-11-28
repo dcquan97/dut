@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", precision: nil, null: false
+    t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum"
-    t.datetime "created_at", precision: nil, null: false
+    t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -44,9 +44,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.text "description"
     t.string "category"
     t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "thumbnail"
   end
 
@@ -66,9 +66,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.text "description"
     t.string "category"
     t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "thumbnail"
   end
 
@@ -78,17 +78,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.string "category"
     t.string "thumbnail"
     t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "our_partners", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
     t.string "partner_image"
     t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "our_teams", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
@@ -96,9 +96,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.text "title"
     t.string "team_image"
     t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "page_infos", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
@@ -113,9 +113,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.string "email"
     t.string "address"
     t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "image_contact"
   end
 
@@ -125,9 +125,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.string "category"
     t.string "price"
     t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "thumbnail"
     t.string "mini_description"
     t.bigint "rating"
@@ -140,23 +140,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.string "name"
     t.string "avatar"
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at", precision: nil
-    t.datetime "remember_created_at", precision: nil
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.bigint "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at", precision: nil
-    t.datetime "last_sign_in_at", precision: nil
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "confirmation_token"
-    t.datetime "confirmed_at", precision: nil
-    t.datetime "confirmation_sent_at", precision: nil
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.bigint "failed_attempts", default: 0, null: false
     t.string "unlock_token"
-    t.datetime "locked_at", precision: nil
-    t.datetime "deleted_at", precision: nil
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "locked_at"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
