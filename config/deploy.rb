@@ -6,7 +6,8 @@ set :repo_url, "git@github.com:dcquan97/dut.git"
 set :user,            'root'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
-set :rvm_type, :user
+# set :rvm_type, :user
+set :rvm_bin_path, "~/.rvm/bin"
 
 set :pty,             true
 set :use_sudo,        false
@@ -28,7 +29,17 @@ set :puma_init_active_record, true
 # Skip migration if files in db/migrate were not modified
 # Defaults to false
 set :conditionally_migrate, true
+set :migration_role, :db
 
+# Defaults to the primary :db server
+set :migration_servers, -> { primary(fetch(:migration_role)) }
+
+# Defaults to `db:migrate`
+set :migration_command, 'db:migrate'
+
+# Defaults to false
+# Skip migration if files in db/migrate were not modified
+set :conditionally_migrate, true
 # ================================================
 # ============ From Custom Rake Tasks ============
 # ================================================
