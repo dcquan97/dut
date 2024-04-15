@@ -61,7 +61,7 @@
 #   }
 set :stage, :production
 set :rails_env, :production
-set :deploy_to, "/deploy/apps/dut"
+set :deploy_to, "deploy/apps/dut"
 set :branch, :main
 server "117.2.253.184", user: "dcqbean", roles: %w(web app db)
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
