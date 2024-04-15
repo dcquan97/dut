@@ -1,2 +1,2 @@
-class Users::Tours::UpdateForm < Users::Tours::BaseForm
+class Users::Posts::UpdateForm < Users::Posts::BaseForm
 end

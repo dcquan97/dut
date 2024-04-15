@@ -8,4 +8,4 @@
   .col-lg-12
     .card.mb-4.shadow
       .card-body
-        = render partial: 'users/page_info/form', locals: { form: @form, url: users_page_info_path(@page_info.id), method: :put }
+        = render partial: 'users/page_info/form', locals: { form: @form, url: users_page_info_path(@page_info&.id), method: :put }

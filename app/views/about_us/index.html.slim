@@ -13,11 +13,11 @@
               | ĐẠI HỌC ĐÀ NẴNG - TRƯỜNG ĐẠI HỌC BÁCH KHOA
             hr
           p.mbr-section-text.mbr-fonts-style.mbr-white.display-7
-            = @page_info.about_us.html_safe
+            = @page_info&.about_us&.html_safe
           .mbr-section-bottom
       .col-12.col-lg-6.image-wrapper.wow.fadeInUp[data-wow-delay="0.1s"]
         .mbr-img-wrap
-          = image_tag @page_info.image_about_url, class:'w-100 rounded'
+          = image_tag @page_info&.image_about_url, class:'w-100 rounded'
 .container-xxl.py-5
   .container
     .text-center.mx-auto.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]

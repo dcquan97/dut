@@ -1,4 +1,4 @@
-class Tour < ApplicationRecord
+class Post < ApplicationRecord
   acts_as_paranoid
   mount_uploader :thumbnail, ImageUploader
 

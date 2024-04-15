@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_02_103630) do
   create_table "active_storage_attachments", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,17 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "car_rentals", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "category"
-    t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "thumbnail"
-  end
-
   create_table "ckeditor_assets", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
@@ -61,18 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "news", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "category"
-    t.bigint "status", default: 0, null: false
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "thumbnail"
-  end
-
-  create_table "our_guests", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
+  create_table "events", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "category"
@@ -112,26 +90,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_134319) do
     t.string "sdt"
     t.string "email"
     t.string "address"
+    t.string "image_contact"
     t.bigint "status", default: 0, null: false
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_contact"
   end
 
-  create_table "tours", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
+  create_table "posts", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.text "mini_description"
     t.string "category"
-    t.string "price"
+    t.string "thumbnail"
+    t.bigint "highlight"
     t.bigint "status", default: 0, null: false
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "thumbnail"
-    t.string "mini_description"
-    t.bigint "rating"
-    t.bigint "highlight"
   end
 
   create_table "users", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|

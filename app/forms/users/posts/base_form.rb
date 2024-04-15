@@ -1,4 +1,4 @@
-class Users::Tours::BaseForm < ApplicationForm
+class Users::Posts::BaseForm < ApplicationForm
   attribute :title
   attribute :description
   attribute :category

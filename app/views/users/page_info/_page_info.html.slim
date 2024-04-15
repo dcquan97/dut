@@ -1,10 +1,10 @@
 tr.align-middle
   td
-    = image_tag page_info.image_about_url, width: 130, class: 'img-fluid rounded'
+    = image_tag page_info&.image_about_url, width: 130, class: 'img-fluid rounded'
   td
-    = page_info.status == 1 ? 'Tiếng Anh' : 'Tiếng Việt'
+    = page_info&.status == 1 ? 'Tiếng Anh' : 'Tiếng Việt'
   td
-    = page_info.updated_at.in_time_zone("Hanoi").strftime("%H:%M %d-%m-%Y")
+    = page_info&.updated_at.in_time_zone("Hanoi").strftime("%H:%M %d-%m-%Y")
   td
     =link_to users_page_info_path(page_info), class: 'btn btn-warning btn-sm mr-3' do
       i.far.fa-edit

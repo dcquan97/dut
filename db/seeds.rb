@@ -13,11 +13,3 @@ User.create( email: "admin@admin.com",
     confirmed_at: Time.current,
     avatar: File.open(Rails.root.join('db/fixtures/images/human_illustrator.jpg'))
   )
-
-Tour.with_deleted.delete_all
-Tour.create( title: 'VNN302 | Hanoi - Halong 3D2N',
-    description: 'This itinerary allows you to experience the natural beauty of Halong Bay on a day trip, while also providing ample time to explore the cultural and historical attractions of Hanoi',
-    category: 'vietnam north',
-    price: '295 USD / Person',
-    thumbnail: File.open(Rails.root.join('db/fixtures/images/vnn301-hanoi-halong-3d2n.jpg'))
-)
