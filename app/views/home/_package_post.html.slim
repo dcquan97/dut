@@ -6,15 +6,15 @@
     /     i.fa.fa-link
   .p-4
     = link_to package_post.title.truncate(100), post_path(package_post), class: 'd-block h5', style: 'color: #003C71; text-decoration: none;'
-    - if package_post.rating.present? && package_post.rating > 5
-      .row.justify-content-start
-        .col-2.text-center style='margin-left: 10px;background: #9fc43a; color: #fff; font-weight: bold; border-radius: 6px;'
-          | #{package_post.rating}
-        .col-6 style='color:#9fc43a; '
-          -if package_post.rating >= 9
-            = t("home.index.very_good")
-          -else 
-            = t("home.index.good")
+    / - if package_post.rating.present? && package_post.rating > 5
+    /   .row.justify-content-start
+    /     .col-2.text-center style='margin-left: 10px;background: #9fc43a; color: #fff; font-weight: bold; border-radius: 6px;'
+    /       | #{package_post.rating}
+    /     .col-6 style='color:#9fc43a; '
+    /       -if package_post.rating >= 9
+    /         = t("home.index.very_good")
+    /       -else 
+    /         = t("home.index.good")
     .row.mt-1
       .col style='color: #00abc5;'
         i.fa-solid.fa-calendar-days

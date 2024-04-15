@@ -6,7 +6,6 @@ class Users::Posts::BaseForm < ApplicationForm
   attribute :status
   attribute :thumbnail
   attribute :mini_description
-  attribute :rating
 
   validates :title, :description, :category, :highlight, :status,
             presence: true
