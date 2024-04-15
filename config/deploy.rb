@@ -16,11 +16,11 @@ set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 set :keep_releases, 3
 set :shared_path, '/deploy/dut/shared'
 append :rvm_map_bins, 'puma', 'pumactl'
-set :puma_bind,       "unix:///deploy/apps/dut/shared/tmp/sockets/puma.sock"
-set :puma_state,      "/deploy/apps/dut/shared/tmp/pids/puma.state"
-set :puma_pid,        "/deploy/apps/dut/shared/tmp/pids/puma.pid"
-set :puma_access_log, "/deploy/apps/dut/shared/log/puma.error.log"
-set :puma_error_log,  "/deploy/apps/dut/shared/log/puma.access.log"
+set :puma_bind,       "unix://home/dcqbean/deploy/apps/dut/shared/tmp/sockets/puma.sock"
+set :puma_state,      "home/dcqbean/deploy/apps/dut/shared/tmp/pids/puma.state"
+set :puma_pid,        "home/dcqbean/deploy/apps/dut/shared/tmp/pids/puma.pid"
+set :puma_access_log, "home/dcqbean/deploy/apps/dut/shared/log/puma.error.log"
+set :puma_error_log,  "home/dcqbean/deploy/apps/dut/shared/log/puma.access.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
@@ -47,8 +47,8 @@ namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
   task :make_dirs do
     on roles(:app) do
-      execute "mkdir /deploy/apps/dut/shared/tmp/sockets -p"
-      execute "mkdir /deploy/apps/dut/shared/tmp/pids -p"
+      execute "mkdir home/dcqbean/deploy/apps/dut/shared/tmp/sockets -p"
+      execute "mkdir home/dcqbean/deploy/apps/dut/shared/tmp/pids -p"
     end
   end
 
