@@ -1,8 +1,0 @@
-= provide :title_page, 'Tạo bài viết thuê xe'
-= provide :widget_item_action, widget_btn_list('Danh sách bài viết thuê xe', users_car_rental_index_path)
-
-.row
-  .col-lg-12
-    .card.mb-4.shadow
-      .card-body
-        = render partial: 'users/car_rental/form', locals: { form: @form, url: users_car_rental_index_path, method: :post }

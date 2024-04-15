@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_02_103630) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "events", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
+  create_table "news", id: :bigint, default: -> { "unique_rowid()" }, force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "category"

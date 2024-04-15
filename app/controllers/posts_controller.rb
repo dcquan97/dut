@@ -20,12 +20,12 @@ class PostsController < ApplicationController
 
   def show
     if I18n.locale != :vi
-      @post = Tour.find_by(id: params[:id])
-      @highlight_post = Tour.where(highlight: 1, status: 1).common_order.first(10)
+      @post = Post.find_by(id: params[:id])
+      @highlight_post = Post.where(highlight: 1, status: 1).common_order.first(10)
       @page_info = PageInfo.where(status: 1).first
     else
-      @post = Tour.find_by(id: params[:id])
-      @highlight_post = Tour.where(highlight: 1, status: 2).common_order.first(10)
+      @post = Post.find_by(id: params[:id])
+      @highlight_post = Post.where(highlight: 1, status: 2).common_order.first(10)
       @page_info = PageInfo.where(status: 0).first
     end
   end

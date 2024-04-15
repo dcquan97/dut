@@ -8,7 +8,7 @@ class Users::Posts::IndexOperation < Users::Posts::BaseOperation
   private
 
   def load_posts
-    @query = Tour.ransack(params[:query])
+    @query = Post.ransack(params[:query])
     @paginate, @posts = pagy(query.result, items: per_page)
   end
 end

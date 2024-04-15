@@ -5,4 +5,4 @@
     = image_tag @our_partner&.partner_image_url, width: 130, class: 'mb-5'
   = f.file_field :partner_image, class: 'form-control-file'
 
-  = f.button :submit_with_cancel, cancel: users_car_rental_index_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Posts') }
+  = f.button :submit_with_cancel, cancel: users_our_partner_index_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Posts') }

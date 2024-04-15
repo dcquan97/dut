@@ -10,4 +10,4 @@
   = f.file_field :thumbnail, class: 'form-control-file'
   = f.cktext_area  :description, label: 'Nội dung bài viết', ckeditor: { toolbar: 'full'}
 
-  = f.button :submit_with_cancel, cancel: users_tours_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Posts') }
+  = f.button :submit_with_cancel, cancel: users_posts_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Posts') }

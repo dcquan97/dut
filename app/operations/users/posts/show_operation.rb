@@ -4,6 +4,6 @@ class Users::Posts::ShowOperation < Users::Posts::BaseOperation
   private
 
   def build_form
-    @post = Tour.find(params[:id])
+    @post = Post.find(params[:id])
   end
 end
