@@ -11,7 +11,7 @@ set :rvm_bin_path, "~/.rvm/bin"
 
 set :pty,             true
 set :use_sudo,        false
-set :linked_files, %w(config/database.yml config/application.yml)
+set :linked_files, %w(config/database.yml config/application.yml config/master.key)
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads)
 set :keep_releases, 3
 set :shared_path, '/deploy/dut/shared'
