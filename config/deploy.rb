@@ -16,7 +16,7 @@ set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 set :keep_releases, 3
 set :shared_path, '/deploy/dut/shared'
 append :rvm_map_bins, 'puma', 'pumactl'
-set :puma_bind,       "unix://deploy/apps/dut/shared/tmp/sockets/puma.sock"
+set :puma_bind,       "unix:///deploy/apps/dut/shared/tmp/sockets/puma.sock"
 set :puma_state,      "/deploy/apps/dut/shared/tmp/pids/puma.state"
 set :puma_pid,        "/deploy/apps/dut/shared/tmp/pids/puma.pid"
 set :puma_access_log, "/deploy/apps/dut/shared/log/puma.error.log"
