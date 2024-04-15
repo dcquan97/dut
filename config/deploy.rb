@@ -3,7 +3,7 @@ lock "~> 3.17.3"
 
 set :application, "dut"
 set :repo_url, "git@github.com:dcquan97/dut.git"
-set :user,            'dcqbean'
+set :user,            'root'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 # set :rvm_type, :user
