@@ -51,26 +51,26 @@
           = link_to root_path, class:'nav-item nav-link data-turbolinks="false"'
             i.fa.fa-home
           = link_to t("home.index.about"), about_us_path, class:'nav-item nav-link'
-          = link_to "Tuyển sinh", news_index_path, class:'nav-item nav-link'
-          = link_to "Đào tạo", our_guest_index_path, class:'nav-item nav-link'
+          = link_to "Tuyển sinh", about_us_path, class:'nav-item nav-link'
+          = link_to "Đào tạo", academic_index_path, class:'nav-item nav-link'
           -if I18n.locale == :vi
             .nav-item.dropdown
-              = link_to "Sinh viên", tour_nuoc_ngoai_index_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
+              = link_to "Sinh viên", about_us_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
               .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
-                = link_to 'Tour Thái Lan', thailan_index_path, class: 'dropdown-item'
-                = link_to 'Tour Lào', lao_index_path, class: 'dropdown-item'
-                = link_to 'Tour Campuchia', cam_index_path, class: 'dropdown-item'
-                = link_to 'Tour Singapore', sing_index_path, class: 'dropdown-item'
-                = link_to 'Tour Mã Lai', malai_index_path, class: 'dropdown-item'
-                = link_to 'Tour Indonesia', indo_index_path, class: 'dropdown-item'
+                = link_to 'Tin tức hoạt động sinh viên', about_us_path, class: 'dropdown-item'
+                / = link_to 'Tour Lào', lao_index_path, class: 'dropdown-item'
+                / = link_to 'Tour Campuchia', cam_index_path, class: 'dropdown-item'
+                / = link_to 'Tour Singapore', sing_index_path, class: 'dropdown-item'
+                / = link_to 'Tour Mã Lai', malai_index_path, class: 'dropdown-item'
+                / = link_to 'Tour Indonesia', indo_index_path, class: 'dropdown-item'
           .nav-item.dropdown
-            = link_to "Nghiên cứu", package_tours_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
+            = link_to "Nghiên cứu", about_us_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
             .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
-              = link_to t("home.index.vietnam_north"), vietnam_north_index_path, class: 'dropdown-item'
-              = link_to t("home.index.vietnam_central"), vietnam_central_index_path, class: 'dropdown-item'
-              = link_to t("home.index.vietnam_sorth"), vietnam_south_index_path, class: 'dropdown-item'
-              = link_to t("home.index.grand_vietnam"), grand_vietnam_index_path, class: 'dropdown-item'
-          = link_to "Hợp tác", highlight_tours_path, class: 'nav-item nav-link'
+              = link_to t("home.index.vietnam_north"), about_us_path, class: 'dropdown-item'
+              / = link_to t("home.index.vietnam_central"), vietnam_central_index_path, class: 'dropdown-item'
+              / = link_to t("home.index.vietnam_sorth"), vietnam_south_index_path, class: 'dropdown-item'
+              / = link_to t("home.index.grand_vietnam"), grand_vietnam_index_path, class: 'dropdown-item'
+          = link_to "Hợp tác", highlight_posts_path, class: 'nav-item nav-link'
           / = link_to t("home.index.car_rental"), car_rental_index_path, class: 'nav-item nav-link'
           / = link_to t("home.index.contact"), contact_us_path, class:'nav-item nav-link data-turbolinks="false"'
         .ms-auto.d-none.d-lg-block

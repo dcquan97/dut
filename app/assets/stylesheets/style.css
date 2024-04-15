@@ -793,3 +793,14 @@
 .title-truong-mobi .title-school-mobi {
     font-size: 0.75rem;
 }
+
+.btn-custom {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: normal;
+    display: inline-block;
+    padding: 8px 40px;
+    background-color: #fff;
+    border-radius: 30px;
+}

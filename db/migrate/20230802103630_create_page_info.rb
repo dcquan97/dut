@@ -11,6 +11,7 @@ class CreatePageInfo < ActiveRecord::Migration[7.0]
       t.string :sdt
       t.string :email
       t.string :address
+      t.string :image_contact
       t.integer :status, default: '0', null: false
       t.datetime :deleted_at
       t.timestamps null: false

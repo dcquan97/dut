@@ -10,14 +10,14 @@
       span.carousel-control-next-icon[aria-hidden="true"]
       span.visually-hidden
         | Next
-/-highlight tour
+/-highlight post
 / .container-xxl.pt-5
 /   .container
 /     .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
 /       p.fs-5.fw-medium.text-primary.mb-5.text-uppercase
 /         | Tin mới nhất
 /     .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
-/       = render partial: 'highlight_tour', collection: @highlight_tour
+/       = render partial: 'highlight_post', collection: @highlight_post
 /-abc
 / .container-xxl.my-5
 /   .container
@@ -34,14 +34,22 @@
 /       .col-12.col-lg-6.image-wrapper.wow.fadeInUp[data-wow-delay="0.1s"]
 /         .mbr-img-wrap
 /           = image_tag @page_info&.image_about_url, class:'w-100 rounded'
-/-package tour
+/-package post
 .container-xxl.pt-5
   .container
-    .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
-      p.fs-5.fw-medium.text-primary.mb-5.text-uppercase
-        | Tin mới nhất
+    h2.text-center.font-weight-bold.text-primary.text-uppercase.block-title.mb-5
+      | Tin tức
     .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
-      = render partial: 'package_tour', collection: @package_tour
+      = render partial: 'package_post', collection: @package_post
+    .text-center
+      = link_to ' Xem tất cả ', about_us_path, class: 'btn btn-primary button btn-custom'
+.container-xxl.pt-5.mt-5 style="background-color: aliceblue;"
+  .container
+    h2.text-center.font-weight-bold.text-primary.text-uppercase.block-title.mb-5
+      | Sự kiện NỔI BẬT
+    .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+      = render partial: 'package_post', collection: @package_post
+
 /-car rental
 / .container-xxl.pt-5
 /   .container

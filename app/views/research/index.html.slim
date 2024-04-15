@@ -1,0 +1,52 @@
+/! Page Content
+.container
+  /! Page Heading/Breadcrumbs
+  ol.breadcrumb
+    li.breadcrumb-item
+      = link_to 'Home', root_path
+    li.breadcrumb-item.active = t("home.index.package_post")
+  .row
+    /! Blog Entries Column
+    .col-md-8
+      /! Blog Post
+      = render partial: 'post', collection: @post
+      /! Pagination
+      .card-footer
+        = render partial: 'layouts/users/shared/pagy'
+
+    /! Sidebar Widgets Column
+    .col-md-4
+      /! Search Widget
+      .card.mb-4
+        h5.card-header Tìm kiếm
+        .card-body
+          = search_form_for @query, url: @url, class: 'd-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-100 navbar-search' do |f|
+            .input-group
+              = f.search_field :title_or_category_cont, class:'form-control bg-light border-0 small', 'placeholder': "Tra cứu bài viết ...", 'aria-describedby': 'basic-addon2', 'aria-label': 'Search'
+              .input-group-append
+                = f.button :submit, class: "btn btn-primary" do
+                  i.fas.fa-search.fa-sm
+      /! Categories Widget
+      .card.my-4
+        h5.card-header Danh mục
+        .card-body
+          ul.list-unstyled.mb-0
+            li
+              = link_to t("home.index.package_post"),package_posts_path, class: 'button'
+            li
+              = link_to t("home.index.highlight_post"),highlight_posts_path, class: 'button mt-2'
+            li
+              = link_to t("home.index.car_rental"),car_rental_index_path, class: 'button mt-2'
+
+      /! Side Widget
+      / .card.my-4
+        h5.card-header Liên hệ
+        .card-body
+          strong
+            | VN To You Tour Co., Ltd
+          br
+          | Address: No.5 - TT1 Alley 345 Thach Ban Str., Long Bien Dist, Ha Noi, Viet Nam
+          br
+          | Phone: 0904.596.505
+  /! /.row
+/! /.container

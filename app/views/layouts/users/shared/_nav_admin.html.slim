@@ -5,20 +5,18 @@ ul#accordionSidebar.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordio
   = link_to root_path, class: 'sidebar-brand d-flex align-items-center justify-content-center' do
     .sidebar-brand.d-flex.align-items-center.justify-content-center
       .sidebar-brand-icon
-        = image_tag '578logo.png', width: 50
+        = image_tag 'logo-mini.jpeg', width: 50
   br
   /! Divider
   hr.sidebar-divider.my-0/
 
   / = item_nav_link(text: 'Trang chủ', link: root_path, icon: 'fas fa-home', ctrl: 'home')
   = heading_sidebar('Quản lý bài viết')
-  = item_nav_link(text: 'Tours', link: users_tours_path, icon: 'far fa-newspaper', ctrl: 'tours')
-  = item_nav_link(text: 'Car Rental', link: users_car_rental_index_path, icon: 'far fa-newspaper', ctrl: 'car_rental')
+  = item_nav_link(text: 'Tin bài', link: users_posts_path, icon: 'far fa-newspaper', ctrl: 'tin bài')
   = item_nav_link(text: 'News', link: users_news_index_path, icon: 'far fa-newspaper', ctrl: 'news')
-  = item_nav_link(text: 'Our Guest', link: users_our_guest_index_path, icon: 'far fa-newspaper', ctrl: 'our_guest')
   = item_nav_link(text: 'Our Team', link: users_our_team_index_path, icon: 'far fa-newspaper', ctrl: 'our_team')
   = item_nav_link(text: 'Our Partner', link: users_our_partner_index_path, icon: 'far fa-newspaper', ctrl: 'our_partner')
-  = item_nav_link(text: 'Page Info', link: users_page_info_index_path, icon: 'far fa-newspaper', ctrl: 'page_info')
+  = item_nav_link(text: 'Nội dung giới thiệu', link: users_page_info_index_path, icon: 'far fa-newspaper', ctrl: 'page_info')
   = heading_sidebar('Tài khoản')
 
   = item_nav_link(text: 'Thông tin tài khoản', link: users_profile_path, icon: 'fas fa-user-alt', ctrl: 'profile')

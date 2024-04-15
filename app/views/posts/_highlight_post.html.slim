@@ -12,9 +12,9 @@
           | #{highlight_post.rating}
         .col-6 style='color:#9fc43a; '
           -if highlight_post.rating >= 9
-            = t("home.index.very_good")
+            | Very Good
           -else 
-            = t("home.index.good")
+            | Good
     .row.mt-1
       .col style='color: #00abc5;'
         = highlight_post.mini_description

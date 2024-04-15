@@ -1,0 +1,11 @@
+.row.mb-2
+  .img-box.col-md-4
+    = image_tag post.thumbnail_url, class: 'img-fluid rounded'
+  .col-md-8
+    h5.card-title = link_to post.title, post_path(post), class: 'text-dark'
+    / p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
+    .price-box
+      -if post.price.nil?
+        | Contact
+      -else
+        = ' ' +post.price

@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   def index
     if I18n.locale != :vi
-      @package_tour = Tour.where( status: 1 ).common_order.first(10)
-      @highlight_tour = Tour.where(highlight: 1, status: 1 ).common_order.first(10)
+      @package_post = Tour.where( status: 1 ).common_order.first(10)
+      @highlight_post = Tour.where(highlight: 1, status: 1 ).common_order.first(10)
       @car_rental = CarRental.where(status: 1 ).common_order.first(10)
       @new = New.where(status: 1 ).common_order.first(10)
       @our_guest = OurGuest.where(status: 1 ).common_order.first(10)
@@ -11,8 +11,8 @@ class HomeController < ApplicationController
       @team = OurTeam.where(status: 1).common_order.first(10)
       @page_info = PageInfo.where( status: 1).first
     else
-      @package_tour = Tour.where( status: 2 ).common_order.first(10) || Tour.where( status: 1 ).common_order.first(10)
-      @highlight_tour = Tour.where(highlight: 1, status: 2 ).common_order.first(10) || Tour.where(highlight: 1, status: 1 ).common_order.first(10)
+      @package_post = Tour.where( status: 2 ).common_order.first(10) || Tour.where( status: 1 ).common_order.first(10)
+      @highlight_post = Tour.where(highlight: 1, status: 2 ).common_order.first(10) || Tour.where(highlight: 1, status: 1 ).common_order.first(10)
       @car_rental = CarRental.where(status: 2 ).common_order.first(10) || CarRental.where(status: 1 ).common_order.first(10)
       @new = New.where(status: 2 ).common_order.first(10) || New.where(status: 1 ).common_order.first(10)
       @our_guest = OurGuest.where(status: 2 ).common_order.first(10) || OurGuest.where(status: 1 ).common_order.first(10)

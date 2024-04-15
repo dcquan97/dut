@@ -3,7 +3,7 @@ lock "~> 3.17.3"
 
 set :application, "dut"
 set :repo_url, "git@github.com:dcquan97/dut.git"
-set :user,            'root'
+set :user,            'dcqbean'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 # set :rvm_type, :user
@@ -21,7 +21,7 @@ set :puma_state,      "/deploy/apps/dut/shared/tmp/pids/puma.state"
 set :puma_pid,        "/deploy/apps/dut/shared/tmp/pids/puma.pid"
 set :puma_access_log, "/deploy/apps/dut/shared/log/puma.error.log"
 set :puma_error_log,  "/deploy/apps/dut/shared/log/puma.access.log"
-set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
+set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true

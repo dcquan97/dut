@@ -3,8 +3,11 @@ class ApplicationController < ActionController::Base
 
   private
   def extract_locale_from_accept_language_header
-    request.location.country
-    # request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first # lọc lấy mã ngôn ngữ đc ghi trong header
+    unless request.location.country.nil?
+      request.location.country
+    else
+      request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first # lọc lấy mã ngôn ngữ đc ghi trong header
+    end
   end
 
   def set_locale

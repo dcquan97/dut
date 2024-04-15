@@ -7,23 +7,13 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/en', to: 'home#index'
   get '/vi', to: 'home#index'
-  resources :tours
-  resources :package_tours
-  resources :tour_nuoc_ngoai
-  resources :vietnam_north
-  resources :vietnam_central
-  resources :vietnam_south
-  resources :thailan
-  resources :lao
-  resources :cam
-  resources :sing
-  resources :malai
-  resources :indo
-  resources :grand_vietnam
-  resources :highlight_tours
-  resources :news
-  resources :car_rental
-  resources :our_guest
+  get 'tin-tuc', to: 'post#index'
+  resources :posts
+  resources :research
+  resources :students
+  resources :highlight_posts
+  resources :academic
+  resources :cooperation
   resources :contact_us
   resources :about_us
   resources :quote
@@ -35,12 +25,10 @@ Rails.application.routes.draw do
     get :profile, to: 'profile#index'
     put :profile, to: 'profile#update'
 
-    resources :tours, except: :edit
-    resources :our_guest, except: :edit
+    resources :posts, except: :edit
     resources :our_team, except: :edit
     resources :our_partner, except: :edit
     resources :news, except: :edit
-    resources :car_rental, except: :edit
     resources :page_info, except: :edit
   end
 end
