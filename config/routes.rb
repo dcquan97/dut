@@ -30,5 +30,6 @@ Rails.application.routes.draw do
     resources :our_partner, except: :edit
     resources :news, except: :edit
     resources :page_info, except: :edit
+    resources :banners
   end
 end

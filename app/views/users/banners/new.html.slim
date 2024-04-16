@@ -1,0 +1,8 @@
+= provide :title_page, 'Tạo banners'
+= provide :widget_item_action, widget_btn_list('Danh sách banners', users_banners_path)
+
+.row
+  .col-lg-12
+    .card.mb-4.shadow
+      .card-body
+        = render partial: 'users/banners/form', locals: { form: @form, url: users_banners_path, method: :post }

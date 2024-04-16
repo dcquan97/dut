@@ -1,0 +1,11 @@
+= simple_form_for form, url: url, data: { turbo: false }, method: method do |f|
+  = f.input  :title, label: 'Tiêu đề banners', class: 'mt-1'
+  = f.input  :status, label: 'Hiển thị banners', collection: banner_status, class:'mb-5'
+
+  = f.hidden_field :thumbnail_cache
+  = f.label 'Banner: '
+  - unless @banner.nil?
+    = image_tag @banner&.thumbnail_url, width: 130, class: 'mb-5'
+  = f.file_field :thumbnail, class: 'form-control-file'
+
+  = f.button :submit_with_cancel, cancel: users_banners_path, data: { confirm: t('helpers.data-confirm.update', subject: 'Banners') }
