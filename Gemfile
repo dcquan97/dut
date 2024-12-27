@@ -82,7 +82,7 @@ gem "jsbundling-rails", "~> 1.1"
 
 gem "devise", "~> 4.9"
 
-gem "ckeditor", "~> 5.1.1"
+gem "ckeditor", "~> 5.1.3"
 
 gem "paranoia", "~> 2.6"
 

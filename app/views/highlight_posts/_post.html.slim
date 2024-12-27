@@ -1,18 +1,15 @@
-.row.mb-2
-  .img-box.col-md-4
-    = image_tag post.thumbnail_url, class: 'img-fluid rounded'
-  .col-md-8
-    h5.card-title = link_to post.title, post_path(post), class: 'd-block h5', style: 'color: #003C71; text-decoration: none;'
-    / p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
-    / - if post.rating.present?
-    /   .row.justify-content-start
-    /     .col-2.text-center style='margin-left: 10px;background: #9fc43a; color: #fff; font-weight: bold; border-radius: 6px;'
-    /       | New
-    .row.mt-1
-      .col style='color: #00abc5;'
-        = post.mini_description
-    .price-box.text-end
-      -if post.price.nil?
-        | Contact
-      -else
-        = ' ' +post.price
+.frame-9
+  .frame-10
+    = image_tag post.thumbnail_url, class: 'image-4'
+    / img.image-4[src="https://c.animaapp.com/I3pfvQWV/img/image-14@2x.png"]
+    .frame-11
+      .frame-12
+        p
+          = link_to post.title, post_path(post), class: 'text-wrapper-11'
+        / p.text-wrapper-11
+        /   |  Điểm chuẩn trúng tuyển đại học hệ chính quy theo kết quả đánh giá tư duy do ĐHBK Hà Nội tổ chức 
+        .text-wrapper-12
+          = post.updated_at.strftime("%d-%m-%Y")
+      p.tr-ng-i-h-c-b-ch-kho-2
+        |  Trường Đại học Bách Kho (Đà Nẵng) Thông báo Tuyển sinh Đại học năm 2024 theo phương thức xét tuyển: Xét tuyển thẳng theo qui định của Bộ Giáo dục Đào tạo và Theo đề án riêng của trường; Xét tuyển dựa vào Kết quả thi đánh giá năng lực của Đại học Quốc Gia HCM Đại học Quốc gia Hà Nội năm... 
+  img.vector-3[src="https://c.animaapp.com/I3pfvQWV/img/vector-14-5.svg"]

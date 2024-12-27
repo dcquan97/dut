@@ -1,22 +1,22 @@
 #spinner.show.bg-white.position-fixed.translate-middle.w-100.vh-100.top-50.start-50.d-flex.align-items-center.justify-content-center
   .spinner-border.text-primary[role="status" style="width: 3rem; height: 3rem;"]
-.container-fluid.bg-light.text-primary.d-none.d-lg-flex
-  .container.py-3
+/ .container-fluid.bg-light.text-primary.d-none.d-lg-flex
+/   .container.py-3
     / .d-flex.align-items-center
-    .text-white.fw-bold.m-0.row
-      = link_to root_path, class: "col-lg-12 col-xl-4 logo-truong" do
-        = image_tag("logo-mini.jpeg", class: 'img-fluid rounded me-2', size: '60x60')
-        .title-truong 
-          .title-faculity.text-primary
-            | ĐẠI HỌC ĐÀ NẴNG 
-          .title-school.text-primary
-            | TRƯỜNG ĐẠI HỌC BÁCH KHOA
-      .col-lg-12.col-xl-8.ms-auto.align-items-center.navi-top.d-lg-block.mt-3
-        = link_to 'Phụ huynh & Học sinh', root_path, class: 'text-primary text-uppercase ms-3 small'
-        = link_to 'Sinh Viên', root_path, class: 'text-primary text-uppercase ms-3 small'
-        = link_to 'Cựu sinh viên', root_path, class: 'text-primary text-uppercase ms-3 small'
-        = link_to 'Cán bộ viên chức', root_path, class: 'text-primary text-uppercase ms-3 small'
-        = link_to 'Tổ chức - doanh nghiệp', contact_us_path, class: 'text-primary text-uppercase ms-3 small'
+    / .text-white.fw-bold.m-0.row
+    /   = link_to root_path, class: "col-lg-12 col-xl-4 logo-truong" do
+    /     = image_tag("logo-mini.jpeg", class: 'img-fluid rounded me-2', size: '60x60')
+    /     .title-truong 
+    /       .title-faculity.text-primary
+    /         | ĐẠI HỌC ĐÀ NẴNG 
+    /       .title-school.text-primary
+    /         | TRƯỜNG ĐẠI HỌC BÁCH KHOA
+    /   .col-lg-12.col-xl-8.ms-auto.align-items-center.navi-top.d-lg-block.mt-3
+    /     = link_to 'Phụ huynh & Học sinh', root_path, class: 'text-primary text-uppercase ms-3 small'
+    /     = link_to 'Sinh Viên', root_path, class: 'text-primary text-uppercase ms-3 small'
+    /     = link_to 'Cựu sinh viên', root_path, class: 'text-primary text-uppercase ms-3 small'
+    /     = link_to 'Cán bộ viên chức', root_path, class: 'text-primary text-uppercase ms-3 small'
+    /     = link_to 'Tổ chức - doanh nghiệp', contact_us_path, class: 'text-primary text-uppercase ms-3 small'
         / small.ms-2
         /   i.fa.fa-map-marker-alt.me-1
         /   = @page_info&.address
@@ -38,7 +38,7 @@
     nav.navbar.navbar-expand-lg.bg-white.navbar-light.p-lg-0
       = link_to root_path, class: 'navbar-brand d-lg-none'
         h1.fw-bold.m-0.col-lg-12.col-xl-4.logo-truong
-          = image_tag "logo-mini.jpeg", size: "60x60", class:'me-1'
+          = image_tag "https://cdn.builder.io/api/v1/image/assets/TEMP/c2c9ed380f8608ec8238df5152d7574852bd8eb6cc8ef4d676998b6715c1df67?placeholderIfAbsent=true&apiKey=774340e6aa3246f7a47d849f673be36a", size: "60x60", class:'me-1'
           .title-truong-mobi
             .title-faculity-mobi.text-primary
               | ĐẠI HỌC ĐÀ NẴNG 
@@ -47,39 +47,90 @@
       button.navbar-toggler.me-0[type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"]
         span.navbar-toggler-icon
       #navbarCollapse.collapse.navbar-collapse
-        .navbar-nav
-          = link_to root_path, class:'nav-item nav-link data-turbolinks="false"'
-            i.fa.fa-home
-          = link_to t("home.index.about"), about_us_path, class:'nav-item nav-link'
-          = link_to "Tuyển sinh", about_us_path, class:'nav-item nav-link'
-          = link_to "Đào tạo", '', class:'nav-item nav-link'
-          -if I18n.locale == :vi
-            .nav-item.dropdown
-              = link_to "Sinh viên", about_us_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
-              .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
-                = link_to 'Tin tức hoạt động sinh viên', about_us_path, class: 'dropdown-item'
-                / = link_to 'Tour Lào', lao_index_path, class: 'dropdown-item'
-                / = link_to 'Tour Campuchia', cam_index_path, class: 'dropdown-item'
-                / = link_to 'Tour Singapore', sing_index_path, class: 'dropdown-item'
-                / = link_to 'Tour Mã Lai', malai_index_path, class: 'dropdown-item'
-                / = link_to 'Tour Indonesia', indo_index_path, class: 'dropdown-item'
-          .nav-item.dropdown
-            = link_to "Nghiên cứu", about_us_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
-            .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
-              = link_to t("home.index.vietnam_north"), about_us_path, class: 'dropdown-item'
-              / = link_to t("home.index.vietnam_central"), vietnam_central_index_path, class: 'dropdown-item'
-              / = link_to t("home.index.vietnam_sorth"), vietnam_south_index_path, class: 'dropdown-item'
-              / = link_to t("home.index.grand_vietnam"), grand_vietnam_index_path, class: 'dropdown-item'
-          = link_to "Hợp tác", highlight_posts_path, class: 'nav-item nav-link'
-          / = link_to t("home.index.car_rental"), car_rental_index_path, class: 'nav-item nav-link'
-          / = link_to t("home.index.contact"), contact_us_path, class:'nav-item nav-link data-turbolinks="false"'
-        .ms-auto.d-none.d-lg-block
-          / =link_to t("home.index.quote"), quote_index_path, class:'btn btn-primary rounded-pill py-2 px-3'
-          .nav-item.dropdown
-            - if I18n.locale != :vi
-              =link_to (image_tag 'icon/united-kingdom-flag-uk.svg', class: 'img-fluid rounded float-left')+" English", root_path, class:'nav-link font-weight-bold dropdown-toggle[data-bs-toggle="dropdown"]'
-            - else 
-              =link_to (image_tag 'icon/Flag_of_Vietnam.svg', class: 'rounded float-left')+" Tiếng Việt", root_path, class:'nav-link font-weight-bold dropdown-toggle[data-bs-toggle="dropdown"]'
-              .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
-                  = link_to (image_tag 'icon/united-kingdom-flag-uk.svg', class: 'img-fluid rounded float-left')+" English", root_path, class: 'dropdown-item font-weight-bold'
-                  = link_to (image_tag 'icon/Flag_of_Vietnam.svg', class: 'img-fluid rounded float-left')+" Tiếng Việt", root_path, class: 'dropdown-item font-weight-bold'
+        .homegapge
+          .navbar-nav
+            .div.header
+              .group.nav-item.nav-link
+                img.logo[src="https://c.animaapp.com/KkKwCDFV/img/logo.svg"]
+                img.i-HC-NNG[src="https://c.animaapp.com/KkKwCDFV/img/--i-h-c----n-ng@2x.png"]
+                img.TRNG-i-HC-BCH-KHOA[src="https://c.animaapp.com/KkKwCDFV/img/tr--ng---i-h-c-b-ch-khoa@2x.png"]
+                img.vector[src="https://c.animaapp.com/KkKwCDFV/img/vector-9.svg"]
+                img.UNIVERSITY-OF[src="https://c.animaapp.com/KkKwCDFV/img/university-of-science@2x.png"]
+                  = link_to root_path, class:'nav-item nav-link data-turbolinks="false"'
+              .frame
+                .menu-header
+                  .TRANG-CH
+                    = link_to "TRANG CHỦ", root_path, class:'nav-item nav-link'
+                img.img[src="https://c.animaapp.com/KkKwCDFV/img/vector-8.svg"]
+                .nav-item.dropdown
+                  .menu-header
+                    .TRANG-CH
+                      = link_to "TUYỂN SINH", about_us_path, class:'nav-item nav-link'
+                  .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
+                    = link_to "Trình độ Đại học", about_us_path, class: 'dropdown-item'
+                    = link_to "Trình độ Thạc sĩ", about_us_path, class: 'dropdown-item'
+                    = link_to "Trình độ Tiến sĩ", about_us_path, class: 'dropdown-item'
+                img.img[src="https://c.animaapp.com/KkKwCDFV/img/vector-8.svg"]
+                .nav-item.dropdown
+                  .menu-header
+                    .TRANG-CH
+                      = link_to "KHÁM PHÁ BÁCH KHOA", about_us_path, class:'nav-item nav-link'
+                  .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
+                    = link_to "Sổ tay tuyển sinh/ Câu hỏi thường gặp", about_us_path, class: 'dropdown-item'
+                    = link_to "Các hoặt động nổi bật", about_us_path, class: 'dropdown-item'
+                    = link_to "Cơ sở vật chất", about_us_path, class: 'dropdown-item'
+                    = link_to "Đội ngũ giảng viên", about_us_path, class: 'dropdown-item'
+                    = link_to "Đời sống sinh viên", about_us_path, class: 'dropdown-item'
+                    = link_to "Tuyển sinh các năm", about_us_path, class: 'dropdown-item'
+                img.img[src="https://c.animaapp.com/KkKwCDFV/img/vector-8.svg"]
+                .menu-header
+                  .TRANG-CH
+                    = link_to "TRA CỨU HỒ SƠ", about_us_path, class:'nav-item nav-link'
+                img.img[src="https://c.animaapp.com/KkKwCDFV/img/vector-8.svg"]
+                .menu-header
+                  .TRANG-CH
+                    = link_to "TƯ VẤN TUYỂN SINH", about_us_path, class:'nav-item nav-link'
+                img.img[src="https://c.animaapp.com/KkKwCDFV/img/vector-8.svg"]
+                .menu-header
+                  .TRANG-CH
+                    = link_to "TIN TỨC", highlight_posts_path, class:'nav-item nav-link'
+          / = link_to root_path, class:'nav-item nav-link data-turbolinks="false"'
+        /     .fw-bold.m-0.col-lg-12.col-xl-4.logo-truong
+        /       = image_tag ("https://cdn.builder.io/api/v1/image/assets/TEMP/c2c9ed380f8608ec8238df5152d7574852bd8eb6cc8ef4d676998b6715c1df67?placeholderIfAbsent=true&apiKey=774340e6aa3246f7a47d849f673be36a")
+        /       .title-faculyti.text-primary
+        /         | ĐẠI HỌC ĐÀ NẴNG 
+        /       .title-truong.text-primary.title-logo-truong
+        /         | TRƯỜNG ĐẠI HỌC BÁCH KHOA
+        /   = link_to t("home.index.about"), about_us_path, class:'nav-item nav-link'
+        /   = link_to "Tuyển sinh", about_us_path, class:'nav-item nav-link'
+        /   = link_to "Đào tạo", '', class:'nav-item nav-link'
+        /   -if I18n.locale == :vi
+        /     .nav-item.dropdown
+        /       = link_to "Sinh viên", about_us_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
+        /       .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
+        /         = link_to 'Tin tức hoạt động sinh viên', about_us_path, class: 'dropdown-item'
+        /         / = link_to 'Tour Lào', lao_index_path, class: 'dropdown-item'
+        /         / = link_to 'Tour Campuchia', cam_index_path, class: 'dropdown-item'
+        /         / = link_to 'Tour Singapore', sing_index_path, class: 'dropdown-item'
+        /         / = link_to 'Tour Mã Lai', malai_index_path, class: 'dropdown-item'
+        /         / = link_to 'Tour Indonesia', indo_index_path, class: 'dropdown-item'
+        /   .nav-item.dropdown
+        /     = link_to "Nghiên cứu", about_us_path, class: 'nav-link dropdown-toggle[data-bs-toggle="dropdown"]'
+        /     .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
+        /       = link_to t("home.index.vietnam_north"), about_us_path, class: 'dropdown-item'
+        /       / = link_to t("home.index.vietnam_central"), vietnam_central_index_path, class: 'dropdown-item'
+        /       / = link_to t("home.index.vietnam_sorth"), vietnam_south_index_path, class: 'dropdown-item'
+        /       / = link_to t("home.index.grand_vietnam"), grand_vietnam_index_path, class: 'dropdown-item'
+        /   = link_to "Hợp tác", highlight_posts_path, class: 'nav-item nav-link'
+        /   / = link_to t("home.index.car_rental"), car_rental_index_path, class: 'nav-item nav-link'
+        /   / = link_to t("home.index.contact"), contact_us_path, class:'nav-item nav-link data-turbolinks="false"'
+        / .ms-auto.d-none.d-lg-block
+        /   / =link_to t("home.index.quote"), quote_index_path, class:'btn btn-primary rounded-pill py-2 px-3'
+        /   .nav-item.dropdown
+        /     - if I18n.locale != :vi
+        /       =link_to (image_tag 'icon/united-kingdom-flag-uk.svg', class: 'img-fluid rounded float-left')+" English", root_path, class:'nav-link font-weight-bold dropdown-toggle[data-bs-toggle="dropdown"]'
+        /     - else 
+        /       =link_to (image_tag 'icon/Flag_of_Vietnam.svg', class: 'rounded float-left')+" Tiếng Việt", root_path, class:'nav-link font-weight-bold dropdown-toggle[data-bs-toggle="dropdown"]'
+        /       .dropdown-menu.bg-light.rounded-0.rounded-bottom.m-0
+        /           = link_to (image_tag 'icon/united-kingdom-flag-uk.svg', class: 'img-fluid rounded float-left')+" English", root_path, class: 'dropdown-item font-weight-bold'
+        /           = link_to (image_tag 'icon/Flag_of_Vietnam.svg', class: 'img-fluid rounded float-left')+" Tiếng Việt", root_path, class: 'dropdown-item font-weight-bold'

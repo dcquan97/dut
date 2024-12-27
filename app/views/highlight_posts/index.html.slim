@@ -1,40 +1,112 @@
 /! Page Content
-.container
-  /! Page Heading/Breadcrumbs
-  ol.breadcrumb
-    li.breadcrumb-item
-      = link_to 'Home', root_path
-    li.breadcrumb-item.active = t("home.index.highlight_post")
-  .row
-    /! Blog Entries Column
-    .col-md-8
-      /! Blog Post
+.thng-bo
+  .div
+    .image
+      .overlap-group
+      img.vector-2[src="https://c.animaapp.com/LOZizBhx/img/vector-11.svg"]
+      img.ellipse[src="https://c.animaapp.com/LOZizBhx/img/ellipse-1@2x.png"]
+      .frame-2
+        p.t-CHU-n-KI-m-NH-c-p
+          span.span
+            | ĐẠT CHUẨN KIỂM ĐỊNH CẤP CƠ SỬ GIÁO DỤC
+            br
+            | THEO BỘ TIÊU CHUẨN
+          span.text-wrapper-2
+            | &nbsp;
+          span.text-wrapper-3
+            | HCERES
+        .div-wrapper
+          .text-wrapper-4
+            | CHI TIẾT
+    .frame-7
+      img.image-2[src="https://c.animaapp.com/I3pfvQWV/img/image-2@2x.png"]
+      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-1@2x.png"]
+      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-3@2x.png"]
+      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-4@2x.png"]
+      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-5@2x.png"]
+      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-6@2x.png"]
+      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-7@2x.png"]
+      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-8@2x.png"]
+    .text-wrapper-10
+      | THÔNG TIN TUYỂN SINH
+    .frame-8
       = render partial: 'post', collection: @post
       /! Pagination
       .card-footer
-        = render partial: 'layouts/users/shared/pagy'
+        == pagy_bootstrap_nav(@pagy)
+  / .frame-13
+  /   .frame-14
+  /     img.img-3[src="https://c.animaapp.com/I3pfvQWV/img/arrow-left.svg"]
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 1
+  /   .frame-15
+  /     .text-wrapper-14
+  /       | 2
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 3
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 4
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 5
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 6
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 7
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 8
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 9
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | 10
+  /   .frame-14
+  /     .text-wrapper-13
+  /       | ...
+  /   .frame-14
+  /     img.img-3[src="https://c.animaapp.com/I3pfvQWV/img/arrow-right.svg"]
+  /! Page Heading/Breadcrumbs
+  / ol.breadcrumb
+  /   li.breadcrumb-item
+  /     = link_to 'Home', root_path
+    / li.breadcrumb-item.active = t("home.index.highlight_post")
+  / .row
+  /   /! Blog Entries Column
+  /   .col-md-8
+  /     /! Blog Post
+  /     = render partial: 'post', collection: @post
+  /     /! Pagination
+  /     .card-footer
+  /       = render partial: 'layouts/users/shared/pagy'
 
     /! Sidebar Widgets Column
-    .col-md-4
-      /! Search Widget
-      .card.mb-4
-        h5.card-header Tìm kiếm
-        .card-body
-          = search_form_for @query, url: @url, class: 'd-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-100 navbar-search' do |f|
-            .input-group
-              = f.search_field :title_or_category_cont, class:'form-control bg-light border-0 small', 'placeholder': "Tra cứu bài viết ...", 'aria-describedby': 'basic-addon2', 'aria-label': 'Search'
-              .input-group-append
-                = f.button :submit, class: "btn btn-primary" do
-                  i.fas.fa-search.fa-sm
-      /! Categories Widget
-      .card.my-4
-        h5.card-header Danh mục
-        .card-body
-          ul.list-unstyled.mb-0
-            li
-              = link_to t("home.index.package_post"),'', class: 'button'
-            li
-              = link_to t("home.index.highlight_post"),'', class: 'button mt-2'
+    / .col-md-4
+    /   /! Search Widget
+    /   .card.mb-4
+    /     h5.card-header Tìm kiếm
+    /     .card-body
+    /       = search_form_for @query, url: @url, class: 'd-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-100 navbar-search' do |f|
+    /         .input-group
+    /           = f.search_field :title_or_category_cont, class:'form-control bg-light border-0 small', 'placeholder': "Tra cứu bài viết ...", 'aria-describedby': 'basic-addon2', 'aria-label': 'Search'
+    /           .input-group-append
+    /             = f.button :submit, class: "btn btn-primary" do
+    /               i.fas.fa-search.fa-sm
+    /   /! Categories Widget
+    /   .card.my-4
+    /     h5.card-header Danh mục
+    /     .card-body
+    /       ul.list-unstyled.mb-0
+    /         li
+    /           = link_to t("home.index.package_post"),'', class: 'button'
+    /         li
+    /           = link_to t("home.index.highlight_post"),'', class: 'button mt-2'
 
       /! Side Widget
       / .card.my-4
