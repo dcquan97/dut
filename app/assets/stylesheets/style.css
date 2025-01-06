@@ -1031,7 +1031,7 @@
   position: relative;
   align-self: stretch;
   width: 100%;
-  height: 108px;
+  height: auto;
   background-image: url(https://c.animaapp.com/KkKwCDFV/img/image-3.png);
   background-size: cover;
   background-position: 50% 50%;
@@ -1039,18 +1039,18 @@
 
 .homegapge .overlap {
   position: relative;
-  width: 1440px;
-  height: 108px;
+  width: 100%;
+  height: 8rem;
   background-image: url(https://c.animaapp.com/KkKwCDFV/img/vector-10.svg);
   background-size: 100% 100%;
 }
 
 .homegapge .vector-2 {
   position: absolute;
-  width: 1341px;
-  height: 98px;
-  top: 10px;
-  left: 99px;
+  width: 100%;
+  height: auto;
+  left: 0rem;
+  top: 0.9rem;
 }
 
 .homegapge .ellipse-2 {
@@ -1266,8 +1266,8 @@
 
 .homegapge .rectangle-2 {
   position: absolute;
-  width: 280px;
-  height: 180px;
+  width: 100%;
+  height: inherit;
   top: 0;
   left: 0;
   background-color: #0063afb2;
@@ -1310,10 +1310,10 @@
 
 .homegapge .image-6 {
   display: flex;
-  height: 180px;
+  height: 11rem;
   align-items: center;
   gap: 8px;
-  padding: 8px 32px;
+  /* padding: 8px 32px; */
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -1326,10 +1326,10 @@
 
 .homegapge .image-7 {
   display: flex;
-  height: 180px;
+  height: 100%;
   align-items: center;
   gap: 8px;
-  padding: 8px 32px;
+  /* padding: 8px 32px; */
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -1342,10 +1342,10 @@
 
 .homegapge .image-8 {
   display: flex;
-  height: 180px;
+  height: 100%;
   align-items: center;
   gap: 8px;
-  padding: 8px 32px;
+  /* padding: 8px 32px; */
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -1365,14 +1365,14 @@
 
 .homegapge .overlap-3 {
   position: relative;
-  width: 1440px;
-  height: 692px;
+  width: 100%;
+  height: auto;
 }
 
 .homegapge .rectangle-3 {
   position: absolute;
-  width: 1440px;
-  height: 460px;
+  width: 100%;
+  height: auto;
   top: 0;
   left: 0;
   background-color: #f9f7f1;
@@ -2068,8 +2068,8 @@
 
 .homegapge .image-17 {
   position: relative;
-  width: 280px;
-  height: 320px;
+  width: 100%;
+  height: auto;
 }
 
 .homegapge .image-18 {

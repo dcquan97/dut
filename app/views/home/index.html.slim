@@ -37,22 +37,22 @@
           | CÁC CHƯƠNG TRÌNH ĐÀO TẠO
 /-dang ky xet tuyen
 .container-fluid.px-0.homegapge
-  .frame-6
+  .frame-6.row
     img.OBJECTS[src="https://c.animaapp.com/KkKwCDFV/img/objects.svg"]
     .ellipse-3
-    .image-5
+    .image-6.col-3
       .rectangle-2
       .icon-share-wrapper
         img.icon-share[src="https://c.animaapp.com/KkKwCDFV/img/icon-share-3.svg"]
       p.text-wrapper-5
         | ĐĂNG KÝ XÉT TUYỂN ĐẠI HỌC
-    .image-6
+    .image-6.col-3
       .rectangle-2
       .icon-share-wrapper
         img.icon-share[src="https://c.animaapp.com/KkKwCDFV/img/icon-share-1.svg"]
       p.text-wrapper-5
         | TRA CỨU HỒ SƠ XÉT TUYỂN
-    .image-7
+    .image-7.col-3
       .rectangle-2
       .icon-share-wrapper
         img.icon-share[src="https://c.animaapp.com/KkKwCDFV/img/icon-share-3.svg"]
@@ -60,7 +60,7 @@
         | NHẬP HỌC 
         br
         | TRỰC TUYẾN
-    .image-8
+    .image-8.col-3
       .rectangle-2
       .icon-share-wrapper
         img.icon-share[src="https://c.animaapp.com/KkKwCDFV/img/icon-share-3.svg"]
@@ -68,7 +68,7 @@
         | TƯ VẤN TUYỂN SINH ONLINE
 /-
 .container-fruid.px-0.homegapge
-  .frame-7
+  .frame-7ml-auto
     .overlap-3
       .rectangle-3
       img.vector-3[src="https://c.animaapp.com/KkKwCDFV/img/vector.svg"]
@@ -78,7 +78,7 @@
           | Tin tức & Sự kiện nổi bật
         .master-button
           .button-label
-            | Xem tất cả
+            = link_to "Xem tất cả", highlight_posts_path, class:'nav-item nav-link'
           img.arrow-right[src="https://c.animaapp.com/KkKwCDFV/img/arrow-right.svg"]
       .frame-9
         img.image-9[src="https://c.animaapp.com/KkKwCDFV/img/image-8.png"]

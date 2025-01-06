@@ -15,7 +15,7 @@
 
 .thng-bo .div-1 {
   background-color: #ffffff;
-  width: 1440px;
+  width: 100%;
   position: relative;
 }
 
@@ -137,8 +137,8 @@
 
 .thng-bo .image {
   position: absolute;
-  width: 1440px;
-  height: 108px;
+  width: 100%;
+  height: auto;
   /* top: 158px; */
   left: 0;
   background-image: url(https://c.animaapp.com/LOZizBhx/img/image.png);
@@ -148,17 +148,17 @@
 
 .thng-bo .overlap-group {
   position: relative;
-  height: 108px;
+  height: 9rem;
   background-image: url(https://c.animaapp.com/LOZizBhx/img/vector-10.svg);
   background-size: 100% 100%;
 }
 
 .thng-bo .vector-2 {
   position: absolute;
-  width: 1341px;
-  height: 98px;
-  top: 10px;
-  left: 99px;
+  width: 100%;
+  height: auto;
+  top: 1.7rem;
+  left: 2rem;
 }
 
 .thng-bo .ellipse {
@@ -434,8 +434,6 @@
   align-items: flex-start;
   gap: 16px;
   position: absolute;
-  top: 150px;
-  left: 1048px;
 }
 
 .thng-bo .image-2 {

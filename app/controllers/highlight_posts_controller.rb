@@ -5,13 +5,13 @@ class HighlightPostsController < ApplicationController
   def index
     if I18n.locale != :vi
       @query = Post.where(highlight: 1, status: 1).common_order.ransack(params[:query])
-      @paginate, @post = pagy(@query.result, items: params[:limit].presence || 20)
+      @paginate, @highlight_post = pagy(@query.result, items: params[:limit].presence || 20)
       @pagy  = @paginate
       @url   = highlight_posts_path
       @page_info = PageInfo.where(status: 1).first
     else
       @query = Post.where(highlight: 1, status: 2).common_order.ransack(params[:query])
-      @paginate, @post = pagy(@query.result, items: params[:limit].presence || 20)
+      @paginate, @highlight_post = pagy(@query.result, items: params[:limit].presence || 20)
       @pagy  = @paginate
       @url   = highlight_posts_path
       @page_info = PageInfo.where(status: 0).first
@@ -20,10 +20,12 @@ class HighlightPostsController < ApplicationController
 
   def show
     if I18n.locale != :vi
-      @post = Post.find_by(id: params[:id], category: 'highlight post')
+      @post = Post.find_by(id: params[:id])
+      @highlight_post = Post.where(highlight: 1, status: 1).common_order.first(10)
       @page_info = PageInfo.where(status: 1).first
     else
-      @post = Post.find_by(id: params[:id], category: 'highlight post')
+      @post = Post.find_by(id: params[:id])
+      @highlight_post = Post.where(highlight: 1, status: 2).common_order.first(10)
       @page_info = PageInfo.where(status: 0).first
     end
   end

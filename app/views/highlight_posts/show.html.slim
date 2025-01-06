@@ -1,23 +1,52 @@
 /! Page Content
-.container
-  /! Title
-  h1.mt-4.text-dark = @post.title
-  /! Author
-  p.small
-    = @post.created_at.in_time_zone("Hanoi").strftime("%d %B, %Y at %H:%M")
-  /! Date/Time
-  hr
-  /! Post Content
-  = @post.description.html_safe
-  hr/
-.thng-bo 
-  .div
-    .frame-7
-      img.image-2[src="https://c.animaapp.com/I3pfvQWV/img/image-2@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-1@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-3@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-4@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-5@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-6@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-7@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-8@2x.png"]
+.thng-bo
+  .div-1
+    .image
+    .overlap-group
+    img.vector-2[src="https://c.animaapp.com/LOZizBhx/img/vector-11.svg"]
+    img.ellipse[src="https://c.animaapp.com/LOZizBhx/img/ellipse-1@2x.png"]
+    .frame-2
+      p.t-CHU-n-KI-m-NH-c-p
+        span.span
+          | ĐẠT CHUẨN KIỂM ĐỊNH CẤP CƠ SỬ GIÁO DỤC
+          br
+          | THEO BỘ TIÊU CHUẨN
+        span.text-wrapper-2
+          | &nbsp;
+        span.text-wrapper-3
+          | HCERES
+      .div-wrapper
+        .text-wrapper-4
+          | CHI TIẾT
+.container-fluid
+  .row
+    .col-9.mx-auto
+      /! Title
+      h1.mt-4.text-dark = @post.title
+      /! Author
+      p.small
+        = @post.created_at.in_time_zone("Hanoi").strftime("%d %B, %Y at %H:%M")
+      /! Date/Time
+      hr
+      /! Post Content
+      / = image_tag @post.thumbnail_url, class: 'img-fluid rounded'
+      = @post.description.html_safe
+      hr/
+    .col-3
+      .thng-bo
+        .frame-7
+          img.image-2[src="https://c.animaapp.com/I3pfvQWV/img/image-2@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-1@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-3@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-4@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-5@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-6@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-7@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-8@2x.png"]
+.container-xxl.pt-5
+  .container
+    .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
+      p.fs-5.fw-medium.text-white.mb-5.button
+        | Tin tức nổi bật!
+    .owl-carousel.project-carousel.wow.fadeInUp[data-wow-delay="0.1s"]
+      = render partial: 'highlight_post', collection: @highlight_post

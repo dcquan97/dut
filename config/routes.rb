@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/en', to: 'home#index'
   get '/vi', to: 'home#index'
-  get 'tin-tuc', to: 'post#index'
+  get 'tin-tuc', to: 'highlight_posts#index'
+  get 'tuyen-sinh', to: 'highlight_posts#index'
   resources :posts
   resources :research
   resources :students

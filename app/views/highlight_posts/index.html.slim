@@ -1,39 +1,41 @@
 /! Page Content
-.thng-bo
-  .div
-    .image
-      .overlap-group
-      img.vector-2[src="https://c.animaapp.com/LOZizBhx/img/vector-11.svg"]
-      img.ellipse[src="https://c.animaapp.com/LOZizBhx/img/ellipse-1@2x.png"]
-      .frame-2
-        p.t-CHU-n-KI-m-NH-c-p
-          span.span
-            | ĐẠT CHUẨN KIỂM ĐỊNH CẤP CƠ SỬ GIÁO DỤC
-            br
-            | THEO BỘ TIÊU CHUẨN
-          span.text-wrapper-2
-            | &nbsp;
-          span.text-wrapper-3
-            | HCERES
-        .div-wrapper
-          .text-wrapper-4
-            | CHI TIẾT
-    .frame-7
-      img.image-2[src="https://c.animaapp.com/I3pfvQWV/img/image-2@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-1@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-3@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-4@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-5@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-6@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-7@2x.png"]
-      img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-8@2x.png"]
-    .text-wrapper-10
-      | THÔNG TIN TUYỂN SINH
-    .frame-8
-      = render partial: 'post', collection: @post
-      /! Pagination
-      .card-footer
-        == pagy_bootstrap_nav(@pagy)
+.container
+  .thng-bo.row
+    .div
+      .image
+        .overlap-group
+        img.vector-2[src="https://c.animaapp.com/LOZizBhx/img/vector-11.svg"]
+        img.ellipse[src="https://c.animaapp.com/LOZizBhx/img/ellipse-1@2x.png"]
+        .frame-2
+          p.t-CHU-n-KI-m-NH-c-p
+            span.span
+              | ĐẠT CHUẨN KIỂM ĐỊNH CẤP CƠ SỬ GIÁO DỤC
+              br
+              | THEO BỘ TIÊU CHUẨN
+            span.text-wrapper-2
+              | &nbsp;
+            span.text-wrapper-3
+              | HCERES
+          .div-wrapper
+            .text-wrapper-4
+              | CHI TIẾT
+      .frame-8.col-9
+        = render partial: 'highlight_post', collection: @highlight_post
+        /! Pagination
+        .card-footer
+          == pagy_bootstrap_nav(@pagy)
+      .frame-7.col-3
+        img.image-2[src="https://c.animaapp.com/I3pfvQWV/img/image-2@2x.png"]
+        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-1@2x.png"]
+        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-3@2x.png"]
+        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-4@2x.png"]
+        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-5@2x.png"]
+        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-6@2x.png"]
+        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-7@2x.png"]
+        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-8@2x.png"]
+      .text-wrapper-10
+        | THÔNG TIN TUYỂN SINH
+      
   / .frame-13
   /   .frame-14
   /     img.img-3[src="https://c.animaapp.com/I3pfvQWV/img/arrow-left.svg"]

@@ -20,7 +20,7 @@
           | CHI TIẾT
 .container-fluid
   .row
-    .col-8
+    .col-9.mx-auto
       /! Title
       h1.mt-4.text-dark = @post.title
       /! Author
@@ -32,16 +32,17 @@
       / = image_tag @post.thumbnail_url, class: 'img-fluid rounded'
       = @post.description.html_safe
       hr/
-    .thng-bo.col-4
-      .frame-7
-        img.image-2[src="https://c.animaapp.com/I3pfvQWV/img/image-2@2x.png"]
-        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-1@2x.png"]
-        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-3@2x.png"]
-        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-4@2x.png"]
-        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-5@2x.png"]
-        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-6@2x.png"]
-        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-7@2x.png"]
-        img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-8@2x.png"]
+    .col-3
+      .thng-bo
+        .frame-7
+          img.image-2[src="https://c.animaapp.com/I3pfvQWV/img/image-2@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-1@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-3@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-4@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-5@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-6@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-7@2x.png"]
+          img.image-3[src="https://c.animaapp.com/I3pfvQWV/img/image-8@2x.png"]
 .container-xxl.pt-5
   .container
     .text-center.text-md-start.pb-5.pb-md-0.wow.fadeInUp[data-wow-delay="0.1s" style="max-width: 500px;"]
